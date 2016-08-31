@@ -78,7 +78,7 @@
 <li>将java编码改成GBK</li>
 <li>将注释改成英文<br>这两种做法的工作量都很大，尤其是第2种；此外，更改编码以后，上传git以后重新下载下来，studio本地显示乱码，简直就是一坨**啊</li>
 </ol>
-<p>今天，偶然看到一篇文章：<a href="http://blog.csdn.net/xingshen58/article/details/51644599%20%E2%80%9C%E4%B8%AD%E9%97%AE%E4%B9%B1%E7%A0%81%E7%9A%84%E5%9D%91%E2%80%9D" target="_blank" rel="external">上传jcenter的“第一次”所遇到的坑</a>，另外，还有一片相似的文章，同样可以解决我遇到的乱码问题：<a href="http://blog.csdn.net/lmj623565791/article/details/51148825%20jcenter%E5%8F%91%E5%B8%83" target="_blank" rel="external">Android 快速发布开源项目到jcenter</a>。总结一下，方法都是在app的gradle文件下配置：</p>
+<p>今天，偶然看到一篇文章：<a href="http://blog.csdn.net/xingshen58/article/details/51644599" target="_blank" rel="external"><strong>第一次上传jcenter的坑</strong></a>，另外，还有一片相似的文章，同样可以解决我遇到的乱码问题：<a href="http://blog.csdn.net/lmj623565791/article/details/51148825" target="_blank" rel="external"><strong>Android 快速发布开源项目到jcenter</strong></a>。总结一下，方法都是在app的gradle文件下配置：</p>
 <p>前者解决方法就是避免javadoc的检查，在项目根目录下的gradle下面就要添加如下配置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">	repositories &#123;</div><div class="line">		jcenter()</div><div class="line">	&#125;</div><div class="line">	tasks.withType(Javadoc) &#123;</div><div class="line">		options.addStringOption(&apos;Xdoclint:none&apos;, &apos;-quiet&apos;)</div><div class="line">		options.addStringOption(&apos;encoding&apos;, &apos;UTF-8&apos;)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>后者的解决方法是设置编码方式，同样是在项目的build.gradle中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">	repositories &#123;</div><div class="line">		jcenter()</div><div class="line">	&#125;</div><div class="line">	tasks.withType(Javadoc) &#123;</div><div class="line">        options&#123;</div><div class="line">            encoding &quot;UTF-8&quot;</div><div class="line">            charSet &apos;UTF-8&apos;</div><div class="line">            links &quot;http://docs.oracle.com/javase/7/docs/api&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>两种方案都可以解决乱码问题，不用对文件重新编码或者改成英文，几行代码搞定！<br>小记一篇，方便日后查看^^</p>
@@ -86,7 +86,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/31/bintary/" data-id="cisilrgee0001t8jdzchgeieo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/31/bintary/" data-id="cisim7so20000isjduvsq18i5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -123,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/29/baidu/" data-id="cisilrge80000t8jdeyalq9ud" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/29/baidu/" data-id="cisim7som0001isjdlcd9fj9w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/29/hello-world/" data-id="cisilrgei0002t8jdyoo2lw2p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/29/hello-world/" data-id="cisim7sp30002isjdkz5cad6t" class="article-share-link">Share</a>
       
       
     </footer>
