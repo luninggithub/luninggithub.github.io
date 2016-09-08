@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>设计模式 之 单例模式 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="记录一下学习的设计模式，方便日后查看
+单例模式单例模式是确保某一个类只有一个实例，自行实例化并向整个系统提供这个实例。应用场景：比如创建一个对象需要消耗许多资源，访问IO或数据库等，此时需要考虑单例模式。
+实现单例模式的几个关键点：(1) 构造函数不对外开放，一般为private(2) 构造一个静态方法或者枚举返回实例对象(3) 确保单例类的对象只有一个，尤其在多线程环境下(4) 确保单例类对象在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式 之 单例模式">
+<meta property="og:url" content="http://yoursite.com/2016/09/08/singeton/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="记录一下学习的设计模式，方便日后查看
+单例模式单例模式是确保某一个类只有一个实例，自行实例化并向整个系统提供这个实例。应用场景：比如创建一个对象需要消耗许多资源，访问IO或数据库等，此时需要考虑单例模式。
+实现单例模式的几个关键点：(1) 构造函数不对外开放，一般为private(2) 构造一个静态方法或者枚举返回实例对象(3) 确保单例类的对象只有一个，尤其在多线程环境下(4) 确保单例类对象在">
+<meta property="og:updated_time" content="2016-09-08T13:43:43.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="设计模式 之 单例模式">
+<meta name="twitter:description" content="记录一下学习的设计模式，方便日后查看
+单例模式单例模式是确保某一个类只有一个实例，自行实例化并向整个系统提供这个实例。应用场景：比如创建一个对象需要消耗许多资源，访问IO或数据库等，此时需要考虑单例模式。
+实现单例模式的几个关键点：(1) 构造函数不对外开放，一般为private(2) 构造一个静态方法或者枚举返回实例对象(3) 确保单例类的对象只有一个，尤其在多线程环境下(4) 确保单例类对象在">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-singeton" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-singeton" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/09/08/singeton/" class="article-date">
   <time datetime="2016-09-08T13:42:16.000Z" itemprop="datePublished">2016-09-08</time>
@@ -74,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/08/singeton/">设计模式 之 单例模式</a>
+    <h1 class="article-title" itemprop="name">
+      设计模式 之 单例模式
     </h1>
   
 
@@ -118,139 +126,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-bintary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/31/bintary/" class="article-date">
-  <time datetime="2016-08-31T06:01:12.000Z" itemprop="datePublished">2016-08-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/31/bintary/">上传bintary中文乱码问题</a>
-    </h1>
+    <a href="/2016/08/31/bintary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">上传bintary中文乱码问题</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="上传bintary中文乱码问题"><a href="#上传bintary中文乱码问题" class="headerlink" title="上传bintary中文乱码问题"></a>上传bintary中文乱码问题</h2><p>使用windows做开发问题就是多，各种环境配置、编码问题。。。最经上传bintary失败，报出中文注释乱码问题，“错误: 编码GBK的不可映射字符”。如下图所示：<br><img src="http://img.blog.csdn.net/20160831152540109" alt="Android studio上传bintary乱码"><br>百度了一下，网上主要的2种解决方案：</p>
-<ol>
-<li>将java编码改成GBK</li>
-<li>将注释改成英文<br>这两种做法的工作量都很大，尤其是第2种；此外，更改编码以后，上传git以后重新下载下来，studio本地显示乱码，简直就是一坨**啊</li>
-</ol>
-<p>今天，偶然看到一篇文章：<a href="http://blog.csdn.net/xingshen58/article/details/51644599" target="_blank" rel="external"><strong>第一次上传jcenter的坑</strong></a>，另外，还有一片相似的文章，同样可以解决我遇到的乱码问题：<a href="http://blog.csdn.net/lmj623565791/article/details/51148825" target="_blank" rel="external"><strong>Android 快速发布开源项目到jcenter</strong></a>。总结一下，方法都是在app的gradle文件下配置：</p>
-<p>前者解决方法就是避免javadoc的检查，在项目根目录下的gradle下面就要添加如下配置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">	repositories &#123;</div><div class="line">		jcenter()</div><div class="line">	&#125;</div><div class="line">	tasks.withType(Javadoc) &#123;</div><div class="line">		options.addStringOption(&apos;Xdoclint:none&apos;, &apos;-quiet&apos;)</div><div class="line">		options.addStringOption(&apos;encoding&apos;, &apos;UTF-8&apos;)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>后者的解决方法是设置编码方式，同样是在项目的build.gradle中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">	repositories &#123;</div><div class="line">		jcenter()</div><div class="line">	&#125;</div><div class="line">	tasks.withType(Javadoc) &#123;</div><div class="line">        options&#123;</div><div class="line">            encoding &quot;UTF-8&quot;</div><div class="line">            charSet &apos;UTF-8&apos;</div><div class="line">            links &quot;http://docs.oracle.com/javase/7/docs/api&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>两种方案都可以解决乱码问题，不用对文件重新编码或者改成英文，几行代码搞定！<br>小记一篇，方便日后查看^^</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/31/bintary/" data-id="cisue2dqd00029ojd5vfvbt1i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mark/">mark</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-baidu" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/29/baidu/" class="article-date">
-  <time datetime="2016-08-29T13:40:54.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/baidu/">baidu</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>夜夜想起妈妈的话闪闪的泪光鲁冰花，啊~啊~</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/29/baidu/" data-id="cisue2dq300009ojdpozdx1q3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/29/hello-world/" class="article-date">
-  <time datetime="2016-08-29T13:33:59.668Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/29/hello-world/" data-id="cisue2dqw00079ojd0mh6vuju" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
